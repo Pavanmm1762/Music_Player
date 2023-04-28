@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".NowPlayingFragmentBottom">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/card_bottom"
+        android:background="@color/purple_500"
+        android:padding="5dp">
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:src="@drawable/music_icon"
+            android:id="@+id/bottom_art"
+            android:scaleType="centerCrop"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/skip_next"
+            android:src="@drawable/ic_baseline_skip_next_24"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_play"
+            android:layout_toStartOf="@+id/skip_next"
+            android:layout_marginEnd="10dp"
+            app:fabSize="mini"
+            android:layout_centerVertical="true"
+            android:id="@+id/plauPauseBottom"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/songNameBottom"
+            android:text="Song name is here"
+            android:textColor="@color/white"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@+id/bottom_art"
+            android:textSize="18sp"
+            android:maxLines="1"
+            android:layout_toStartOf="@+id/plauPauseBottom"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/artistNameBottom"
+            android:text="Artist name"
+            android:textColor="@color/white"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@+id/bottom_art"
+            android:textSize="15sp"
+            android:maxLines="1"
+            android:layout_toStartOf="@+id/plauPauseBottom"
+            android:layout_below="@+id/songNameBottom"/>
+    </RelativeLayout>
+</FrameLayout>

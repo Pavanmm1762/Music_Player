@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        android:id="@+id/tab_layout"
+         app:tabIndicatorGravity="center"
+         app:tabTextColor="@color/white"
+        app:tabIndicatorHeight="40dp"
+         app:tabIndicatorColor="@color/teal_200"
+        app:tabIndicator="@drawable/tab_indicator"/>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewpager"
+        android:layout_below="@+id/tab_layout"
+        android:layout_above="@+id/frag_layout"
+        android:layout_marginBottom="50dp"
+        android:layout_alignBottom="@+id/frag_layout"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/frag_layout">
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.example.pmusics.NowPlayingFragmentBottom"
+            tools:layout="@layout/fragment_now_playing_bottom"/>
+    </FrameLayout>
+
+
+</RelativeLayout>
+
+
